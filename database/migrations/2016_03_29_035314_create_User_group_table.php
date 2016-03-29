@@ -16,7 +16,7 @@ class CreateUserGroupTable extends Migration
             $table->bigIncrements('group_id');
             $table->string('group_type', 100)->nullable();
             $table->text('group_description')->nullable();
-            $table->bigIncrements('sub_group');
+            $table->bigInteger('sub_group');
             $table->timestamps();
         });
     }
