@@ -14,8 +14,8 @@ class CreateStudyingResultTable extends Migration
     {
         Schema::create('studying_result', function (Blueprint $table) {
             $table->bigIncrements('sr_id');
-            $table->bigIncrements('user_id');
-            $table->bigIncrements('course_enroll_id');
+            $table->bigInteger('user_id');
+            $table->bigInteger('course_enroll_id');
             $table->float('score',3,2)->nullable();
             $table->string('grade',5)->nullable();
             $table->timestamps('update_timestamp');
