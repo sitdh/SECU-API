@@ -23,11 +23,11 @@ $app->group([
 	/**
      * Routes for resource course
      */
-    $app->get('course','CourseController@index');
-    $app->get('course/{id}','CourseController@getCourse');
-    $app->post('course','CourseController@createCourse');
-    $app->put('course/{id}','CourseController@updateCourse');
-    $app->delete('course/{id}','CourseController@deleteCourse');
+    $app->get('course','CourseController@all');
+    $app->get('course/{id}','CourseController@get');
+    $app->post('course','CourseController@add');
+    $app->put('course/{id}','CourseController@put');
+    $app->delete('course/{id}','CourseController@remove');
 
     /**
      * Routes for resource assignment-project
