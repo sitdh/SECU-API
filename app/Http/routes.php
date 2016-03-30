@@ -30,6 +30,15 @@ $app->group([
     $app->delete('course/{id}','CourseController@remove');
 
     /**
+     * Routes for resource offering-course
+     */
+    $app->get('offering-course', 'OfferingCoursesController@all');
+    $app->get('offering-course/{id}', 'OfferingCoursesController@get');
+    $app->post('offering-course', 'OfferingCoursesController@add');
+    $app->put('offering-course/{id}', 'OfferingCoursesController@put');
+    $app->delete('offering-course/{id}', 'OfferingCoursesController@remove');
+
+    /**
      * Routes for resource assignment-project
      */
     $app->get('assignment-project', 'AssignmentProjectsController@all');
