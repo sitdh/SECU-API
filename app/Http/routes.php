@@ -74,15 +74,70 @@ $app->group([
     $app->put('test-history/{id}', 'TestHistoriesController@put');
     $app->delete('test-history/{id}', 'TestHistoriesController@remove');
 
+//Pab 30/3/2016
     /**
      * Routes for resource user
      */
-    $app->get('test-history', 'TestHistoriesController@all');
-    $app->get('test-history/{id}', 'TestHistoriesController@get');
-    $app->post('test-history', 'TestHistoriesController@add');
-    $app->put('test-history/{id}', 'TestHistoriesController@put');
-    $app->delete('test-history/{id}', 'TestHistoriesController@remove');
+    $app->get('user', 'UserController@all');
+    $app->get('user/{id}', 'UserController@get');
+    $app->post('user', 'UserController@add');
+    $app->put('user/{id}', 'UserController@put');
+    $app->delete('user/{id}', 'UserController@remove');
 
+    /**
+     * Routes for resource user-meta
+     */
+    $app->get('user-meta', 'UserMetaController@all');
+    $app->get('user-meta/{id}', 'UserMetaController@get');
+    $app->post('user-meta', 'UserMetaController@add');
+    $app->put('user-meta/{id}', 'UserMetaController@put');
+    $app->delete('user-meta/{id}', 'UserMetaController@remove');
+
+    /**
+     * Routes for resource assignment-question
+     */
+    $app->get('assignment-question', 'AssignmentQuestionController@all');
+    $app->get('assignment-question/{id}', 'AssignmentQuestionController@get');
+    $app->post('assignment-question', 'AssignmentQuestionController@add');
+    $app->put('assignment-question/{id}', 'AssignmentQuestionController@put');
+    $app->delete('assignment-question/{id}', 'AssignmentQuestionController@remove');
+
+    /**
+     * Routes for resource assignment-testcase
+     */
+    $app->get('assignment-testcase', 'AssignmentTestcaseController@all');
+    $app->get('assignment-testcase/{id}', 'AssignmentTestcaseController@get');
+    $app->post('assignment-testcase', 'AssignmentTestcaseController@add');
+    $app->put('assignment-testcase/{id}', 'AssignmentTestcaseController@put');
+    $app->delete('assignment-testcase/{id}', 'AssignmentTestcaseController@remove');
+
+    /**
+     * Routes for resource feedback
+     */
+    $app->get('feedback', 'FeedbackController@all');
+    $app->get('feedback/{id}', 'FeedbackController@get');
+    $app->post('feedback', 'FeedbackController@add');
+    $app->put('feedback/{id}', 'FeedbackController@put');
+    $app->delete('feedback/{id}', 'FeedbackController@remove');
+
+    /**
+     * Routes for resource feedback-meta
+     */
+    $app->get('feedback-meta', 'FeedbackMetaController@all');
+    $app->get('feedback-meta/{id}', 'FeedbackMetaController@get');
+    $app->post('feedback-meta', 'FeedbackMetaController@add');
+    $app->put('feedback-meta/{id}', 'FeedbackMetaController@put');
+    $app->delete('feedback-meta/{id}', 'FeedbackMetaController@remove');
+
+    /**
+     * Routes for resource object-mapping
+     */
+    $app->get('object-mapping', 'ObjectMappingController@all');
+    $app->get('object-mapping/{id}', 'ObjectMappingController@get');
+    $app->post('object-mapping', 'ObjectMappingController@add');
+    $app->put('object-mapping/{id}', 'ObjectMappingController@put');
+    $app->delete('object-mapping/{id}', 'ObjectMappingController@remove');
+// end:paB
 });
 
 
