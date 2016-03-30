@@ -74,6 +74,15 @@ $app->group([
     $app->put('test-history/{id}', 'TestHistoriesController@put');
     $app->delete('test-history/{id}', 'TestHistoriesController@remove');
 
+    /**
+     * Routes for resource user
+     */
+    $app->get('test-history', 'TestHistoriesController@all');
+    $app->get('test-history/{id}', 'TestHistoriesController@get');
+    $app->post('test-history', 'TestHistoriesController@add');
+    $app->put('test-history/{id}', 'TestHistoriesController@put');
+    $app->delete('test-history/{id}', 'TestHistoriesController@remove');
+
 });
 
 

@@ -1,34 +1,25 @@
-<?php
+<?php namespace App;
 
-namespace App;
-
-use Illuminate\Auth\Authenticatable;
-use Laravel\Lumen\Auth\Authorizable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 
-class User extends Model implements
-    AuthenticatableContract,
-    AuthorizableContract
-{
-    use Authenticatable, Authorizable;
+class User extends Model {
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email',
+    protected $table = "user"; // ชื่อตาราง 
+
+    protected $primaryKey = "user_id"; // Primary Key
+
+    protected $fillable = ["user_number", "username", "password", "email", "firstname", "lastname", "token", "register_date", "last_update"];  
+
+    protected $dates = [];
+
+    public static $rules = [
+        // Validation rules
     ];
 
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',
-    ];
+    public function metas()
+    {
+        return $this->hasMany("App\UserMeta", "user_id", "user_id"); // ตารางที่เราจะเชื่อมด้วย แบบ one-to-many 
+    }
+
+
 }
