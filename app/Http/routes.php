@@ -83,6 +83,32 @@ $app->group([
     $app->put('test-history/{id}', 'TestHistoriesController@put');
     $app->delete('test-history/{id}', 'TestHistoriesController@remove');
 
+    /**
+     * Routes for resource userGroup
+     */
+    $app->get('user-group', 'UserGroupController@all');
+    $app->get('user-group/{id}', 'UserGroupController@get');
+    $app->post('user-group', 'UserGroupController@add');
+    $app->put('user-group/{id}', 'UserGroupController@put');
+    $app->delete('user-group/{id}', 'UserGroupController@remove');
+    /**
+     * Routes for resource CourseEnroll
+     */
+    $app->get('course-enroll', 'CourseEnrollController@all');
+    $app->get('course-enroll/{id}', 'CourseEnrollController@get');
+    $app->post('course-enroll', 'CourseEnrollController@add');
+    $app->put('course-enroll/{id}', 'CourseEnrollController@put');
+    $app->delete('course-enroll/{id}', 'CourseEnrollController@remove');
+    /**
+     * Routes for resource StudyingResult
+     */
+    $app->get('studying-result', 'StudyingResultController@all');
+    $app->get('studying-result/{id}', 'StudyingResultController@get');
+    $app->post('studying-result', 'StudyingResultController@add');
+    $app->put('studying-result/{id}', 'StudyingResultController@put');
+    $app->delete('studying-result/{id}', 'StudyingResultController@remove');
+
+
 });
 
 
