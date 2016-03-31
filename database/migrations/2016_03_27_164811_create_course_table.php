@@ -13,7 +13,7 @@ class CreateCourseTable extends Migration
     public function up()
     {
         Schema::create('course', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('course_number', 20)->nullable();
             $table->string('course_name', 250)->nullable();
             $table->text('course_description')->nullable();
