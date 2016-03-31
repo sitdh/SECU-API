@@ -19,7 +19,7 @@ class CreateAssignmentProjectMetaTable extends Migration
             $table->text('assproj_metavalue')->nullable();
             $table->string('assignment_project_col', 45)->nullable();
             $table->string('assignment_project_metacol', 45)->nullable();
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 

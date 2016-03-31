@@ -12,7 +12,7 @@ class CreateUserGroupTable extends Migration
      */
     public function up()
     {
-        Schema::create('User_group', function (Blueprint $table) {
+        Schema::create('user_group', function (Blueprint $table) {
             $table->bigIncrements('group_id');
             $table->string('group_type', 100)->nullable();
             $table->text('group_description')->nullable();
@@ -28,6 +28,6 @@ class CreateUserGroupTable extends Migration
      */
     public function down()
     {
-        Schema::drop('User_group');
+        Schema::drop('user_group');
     }
 }

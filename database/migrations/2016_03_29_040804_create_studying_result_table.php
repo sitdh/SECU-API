@@ -18,8 +18,8 @@ class CreateStudyingResultTable extends Migration
             $table->bigInteger('course_enroll_id');
             $table->float('score',3,2)->nullable();
             $table->string('grade',5)->nullable();
-            $table->timestamps('update_timestamp');
-            $table->timestamps('last_update');
+            $table->timestamp('update_timestamp');
+            $table->timestamp('last_update');
             $table->timestamps();
 
         });
