@@ -15,5 +15,4 @@ class Assignment extends Model {
 	];
 
 	// Relationships
-
 }
