@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class AssignmentMeta extends Model {
 
-	protected $fillable = [];
+	protected $fillable = ['assignment_id','assignment_meta_key','assignment_metavalue'];
 
 	protected $dates = [];
 
