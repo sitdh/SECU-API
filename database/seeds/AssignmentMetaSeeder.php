@@ -9,7 +9,7 @@ class AssignmentMetaSeeder extends DatabaseSeeder
 
         foreach(range(1, 100) as $index) {
             DB::table('assignment_meta')->insert([
-                'assignment_id' => $faker->numberBetween(0,100),
+                'assignment_id' => $faker->numberBetween(1,100),
                 'assignment_meta_key' => $faker->md5,
                 'assignment_metavalue' => $faker->text($maxNbChars = 200)
             ]);
