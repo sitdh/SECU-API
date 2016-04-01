@@ -14,5 +14,10 @@ class DatabaseSeeder extends Seeder
         $this->call('AssignmentProjectMetaSeeder');
         $this->call('AssignmentSeeder');
         $this->call('AssignmentMetaSeeder');
+
+        $this->call('GroupWorkshopSeeder');
+        $this->call('GroupWorkshopMetaSeeder');
+        // $this->call('TestHistorySeeder');
+        // $this->call('Options');
     }
 }

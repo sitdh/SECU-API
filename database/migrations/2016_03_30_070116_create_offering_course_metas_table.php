@@ -5,7 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateOfferingCourseMetasTable extends Migration
 {
-    
+
     public function up()
     {
         Schema::create('offering_course_meta', function(Blueprint $table) {

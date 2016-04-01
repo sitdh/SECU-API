@@ -28,6 +28,6 @@ class CreateGroupWorkshopMetaTable extends Migration
      */
     public function down()
     {
-        Schema::drop('group_workshop');
+        Schema::drop('group_workshop_meta');
     }
 }

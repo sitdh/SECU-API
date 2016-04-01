@@ -28,6 +28,6 @@ class CreateAssignmentMetaTable extends Migration
      */
     public function down()
     {
-//        Schema::drop('assignment_meta');
+       Schema::drop('assignment_meta');
     }
 }
