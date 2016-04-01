@@ -6,6 +6,8 @@ class GroupWorkshop extends Model {
 
 	protected $table = 'group_workshop';
 
+	protected $primaryKey = 'ga_id';
+
 	protected $fillable = ["assignment_id", "user_id", "added_by_id"];
 
 	protected $dates = [];
@@ -15,5 +17,8 @@ class GroupWorkshop extends Model {
 	];
 
 	// Relationships
-
+	public function metas()
+	{
+		$this->hasMany('App\GroupWorkshotMeta','ga_id','ga_id');
+	}
 }
