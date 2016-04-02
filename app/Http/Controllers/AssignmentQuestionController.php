@@ -5,6 +5,6 @@ class AssignmentQuestionController extends Controller {
 
 	const MODEL = "App\AssignmentQuestion";
 
-	use RESTMetaActions;
+	use RESTActions;
 
 }

@@ -14,7 +14,7 @@ class CreateObjectMappingTable extends Migration
     {
         Schema::create('object_mapping', function (Blueprint $table) {
             $table->bigIncrements('object_mapping_id');
-            $table->bigIncrements('object_id');
+            $table->bigInteger('object_id');
             $table->string('object_type', 50)->nullable();
             $table->timestamps();
         });

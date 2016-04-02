@@ -5,6 +5,6 @@ class ObjectMappingController extends Controller {
 
 	const MODEL = "App\ObjectMapping";
 
-	use RESTMetaActions;
+	use RESTActions;
 
 }

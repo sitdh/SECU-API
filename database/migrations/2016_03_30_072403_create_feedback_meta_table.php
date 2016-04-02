@@ -14,7 +14,7 @@ class CreateFeedbackMetaTable extends Migration
     {
         Schema::create('feedback_meta', function (Blueprint $table) {
             $table->bigIncrements('feedback_meta_id');
-            $table->bigIncrements('feedback__id');
+            $table->bigInteger('feedback__id');
             $table->string('feedback_metakey', 100)->nullable();
             $table->text('feedback_metavalue')->nullable();
             $table->timestamps();

@@ -14,12 +14,12 @@ class CreateFeedbackTable extends Migration
     {
         Schema::create('feedback', function (Blueprint $table) {
             $table->bigIncrements('feedback_id');
-            $table->bigIncrements('feedback_object_id');
-            $table->bigIncrements('user_id');
+            $table->bigInteger('feedback_object_id');
+            $table->bigInteger('user_id');
             $table->text('feedback_message')->nullable();
-            $table->bigIncrements('replay_id');
+            $table->bigInteger('replay_id');
             $table->dateTime('feedback_timestamp');
-            $table->bigIncrements('previous_feedback_id');
+            $table->bigInteger('previous_feedback_id');
             $table->timestamps();
         });
     }

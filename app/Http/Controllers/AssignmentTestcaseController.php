@@ -5,6 +5,6 @@ class AssignmentTestcaseController extends Controller {
 
 	const MODEL = "App\AssignmentTestcase";
 
-	use RESTMetaActions;
+	use RESTActions;
 
 }

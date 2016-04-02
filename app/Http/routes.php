@@ -83,8 +83,8 @@ $app->group([
     $app->put('test-history/{id}', 'TestHistoriesController@put');
     $app->delete('test-history/{id}', 'TestHistoriesController@remove');
 
-<<<<<<< HEAD
-//Pab 30/3/2016
+
+
     /**
      * Routes for resource user
      */
@@ -94,14 +94,6 @@ $app->group([
     $app->put('user/{id}', 'UserController@put');
     $app->delete('user/{id}', 'UserController@remove');
 
-    /**
-     * Routes for resource user-meta
-     */
-    $app->get('user-meta', 'UserMetaController@all');
-    $app->get('user-meta/{id}', 'UserMetaController@get');
-    $app->post('user-meta', 'UserMetaController@add');
-    $app->put('user-meta/{id}', 'UserMetaController@put');
-    $app->delete('user-meta/{id}', 'UserMetaController@remove');
 
     /**
      * Routes for resource assignment-question
@@ -130,14 +122,7 @@ $app->group([
     $app->put('feedback/{id}', 'FeedbackController@put');
     $app->delete('feedback/{id}', 'FeedbackController@remove');
 
-    /**
-     * Routes for resource feedback-meta
-     */
-    $app->get('feedback-meta', 'FeedbackMetaController@all');
-    $app->get('feedback-meta/{id}', 'FeedbackMetaController@get');
-    $app->post('feedback-meta', 'FeedbackMetaController@add');
-    $app->put('feedback-meta/{id}', 'FeedbackMetaController@put');
-    $app->delete('feedback-meta/{id}', 'FeedbackMetaController@remove');
+    
 
     /**
      * Routes for resource object-mapping
@@ -147,8 +132,7 @@ $app->group([
     $app->post('object-mapping', 'ObjectMappingController@add');
     $app->put('object-mapping/{id}', 'ObjectMappingController@put');
     $app->delete('object-mapping/{id}', 'ObjectMappingController@remove');
-// end:paB
-=======
+
     /**
      * Routes for resource userGroup
      */
@@ -175,5 +159,4 @@ $app->group([
     $app->delete('studying-result/{id}', 'StudyingResultController@remove');
 
 
->>>>>>> origin/master
 });

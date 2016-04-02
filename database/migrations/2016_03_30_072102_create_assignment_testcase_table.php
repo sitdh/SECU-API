@@ -14,7 +14,7 @@ class CreateAssignmentTestcaseTable extends Migration
     {
         Schema::create('assignment_testcase', function (Blueprint $table) {
             $table->bigIncrements('atc_id');
-            $table->bigIncrements('aq_id');
+            $table->bigInteger('aq_id');
             $table->string('testcase_number', 30)->nullable();
             $table->text('testcase_objective')->nullable();
             $table->text('testcase_content')->nullable();
