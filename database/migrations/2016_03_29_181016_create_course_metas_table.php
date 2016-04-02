@@ -19,6 +19,6 @@ class CreateCourseMetasTable extends Migration
 
     public function down()
     {
-        Schema::drop('course_metas');
+        Schema::drop('course_meta');
     }
 }

@@ -1,21 +1,31 @@
-## Lumen PHP Framework
+## SECU - API
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+SECU-API is api for course management system that include course, question, complier, testcase, user group and user. 
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## Requirement
 
-## Official Documentation
+- PHP
+- Base on [Lumen] (https://lumen.laravel.com/) Framework
+- MySQL
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+## Getting Started
 
-## Security Vulnerabilities
+- 0) clone โปรเจคจาก github - https://github.com/Neungzad/SECU-API
+- 1) เข้าไปที่ folder -> SECU-API โปรเจคที่ clone มา แล้วใช้คำสั่ง  `composer install` เพื่อโหลดไลบารี่ ที่เกี่ยวข้อง
+- 2) ให้ copy ไฟล์ .env.example แล้วเปลี่ยนชื่อเป็น .env แล้วแก้ไข ให้ตรงกับ db ที่เครื่องเรา
+- 3) ลองเข้า `http://localhost/SECU-API/` ถ้าแสดงข้อความบางอย่าง แสดงว่าใช้ได้ละ 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+## Example
 
-### License
+Some example for how to call this api
 
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+##### Course:
+| Url | Type | Controller | Description |
+|---------------|----------|--------------|----------------------------------------------------------------|
+| /course | GET | CourseController@all | All Courses |
+| /course/{id} | GET | CourseController@get | Fetch Courses By id  |
+| /course | POST | CourseController@add | Create a course record |
+| /course/{id} | PUT | CourseController@put | Update Course by id |
+| /course/{id} | DELETE | CourseController@remove | Delete Courses by id |
+
+

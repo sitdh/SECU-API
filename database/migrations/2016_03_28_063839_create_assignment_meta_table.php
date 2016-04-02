@@ -17,7 +17,7 @@ class CreateAssignmentMetaTable extends Migration
             $table->bigInteger('assignment_id');
             $table->string('assignment_meta_key', 100)->nullable();
             $table->text('assignment_metavalue')->nullable();
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 
@@ -28,6 +28,6 @@ class CreateAssignmentMetaTable extends Migration
      */
     public function down()
     {
-        Schema::drop('assignment_meta');
+       Schema::drop('assignment_meta');
     }
 }

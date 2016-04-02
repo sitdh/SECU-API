@@ -17,7 +17,7 @@ class CreateGroupWorkshopMetaTable extends Migration
             $table->bigInteger('ga_id');
             $table->string('ga_metakey', 100)->nullable();
             $table->text('ga_metavalue')->nullable();
-            $table->timestamps();
+            //$table->timestamps();
         });
     }
 
@@ -28,6 +28,6 @@ class CreateGroupWorkshopMetaTable extends Migration
      */
     public function down()
     {
-        Schema::drop('group_workshop');
+        Schema::drop('group_workshop_meta');
     }
 }

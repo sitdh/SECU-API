@@ -16,7 +16,7 @@ class CreateCourseEnrollTable extends Migration
             $table->bigIncrements('course_enroll_id');
             $table->bigInteger('user_id');
             $table->bigInteger('offering_course_id');
-            $table->timestamps('enroll_timestamp');
+            $table->timestamp('enroll_timestamp');
             $table->timestamps();
         });
     }

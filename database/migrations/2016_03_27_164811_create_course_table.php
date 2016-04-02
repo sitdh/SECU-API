@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserGroupTable extends Migration
+class CreateCourseTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,11 @@ class CreateUserGroupTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_group', function (Blueprint $table) {
-            $table->bigIncrements('group_id');
-            $table->string('group_type', 100)->nullable();
-            $table->text('group_description')->nullable();
-            $table->bigInteger('sub_group');
+        Schema::create('course', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('course_number', 20)->nullable();
+            $table->string('course_name', 250)->nullable();
+            $table->text('course_description')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateUserGroupTable extends Migration
      */
     public function down()
     {
-        Schema::drop('user_group');
+        Schema::drop('course');
     }
 }

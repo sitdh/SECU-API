@@ -20,6 +20,6 @@ class CreateCoursesTable extends Migration
 
     public function down()
     {
-        Schema::drop('courses');
+        Schema::drop('course');
     }
 }
