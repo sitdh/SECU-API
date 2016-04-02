@@ -23,11 +23,11 @@ $app->group([
 	/**
      * Routes for resource course
      */
-    $app->get('course','CourseController@index');
-    $app->get('course/{id}','CourseController@getCourse');
-    $app->post('course','CourseController@createCourse');
-    $app->put('course/{id}','CourseController@updateCourse');
-    $app->delete('course/{id}','CourseController@deleteCourse');
+    $app->get('course','CourseController@all');
+    $app->get('course/{id}','CourseController@get');
+    $app->post('course','CourseController@add');
+    $app->put('course/{id}','CourseController@put');
+    $app->delete('course/{id}','CourseController@remove');
 
     /**
      * Routes for resource assignment-project
@@ -74,6 +74,7 @@ $app->group([
     $app->put('test-history/{id}', 'TestHistoriesController@put');
     $app->delete('test-history/{id}', 'TestHistoriesController@remove');
 
+<<<<<<< HEAD
 //Pab 30/3/2016
     /**
      * Routes for resource user
@@ -138,6 +139,34 @@ $app->group([
     $app->put('object-mapping/{id}', 'ObjectMappingController@put');
     $app->delete('object-mapping/{id}', 'ObjectMappingController@remove');
 // end:paB
+=======
+    /**
+     * Routes for resource userGroup
+     */
+    $app->get('user-group', 'UserGroupController@all');
+    $app->get('user-group/{id}', 'UserGroupController@get');
+    $app->post('user-group', 'UserGroupController@add');
+    $app->put('user-group/{id}', 'UserGroupController@put');
+    $app->delete('user-group/{id}', 'UserGroupController@remove');
+    /**
+     * Routes for resource CourseEnroll
+     */
+    $app->get('course-enroll', 'CourseEnrollController@all');
+    $app->get('course-enroll/{id}', 'CourseEnrollController@get');
+    $app->post('course-enroll', 'CourseEnrollController@add');
+    $app->put('course-enroll/{id}', 'CourseEnrollController@put');
+    $app->delete('course-enroll/{id}', 'CourseEnrollController@remove');
+    /**
+     * Routes for resource StudyingResult
+     */
+    $app->get('studying-result', 'StudyingResultController@all');
+    $app->get('studying-result/{id}', 'StudyingResultController@get');
+    $app->post('studying-result', 'StudyingResultController@add');
+    $app->put('studying-result/{id}', 'StudyingResultController@put');
+    $app->delete('studying-result/{id}', 'StudyingResultController@remove');
+
+
+>>>>>>> origin/master
 });
 
 
