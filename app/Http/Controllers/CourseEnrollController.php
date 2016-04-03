@@ -2,7 +2,7 @@
   
 
   
-class CourseEnrollpController extends Controller {
+class CourseEnrollController extends Controller {
 
 
     const MODEL = "App\CourseEnroll";

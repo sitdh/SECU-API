@@ -2,7 +2,7 @@
   
 
   
-class studying_resultpController extends Controller {
+class StudyingResultpController extends Controller {
 
 
 
