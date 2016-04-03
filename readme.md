@@ -10,10 +10,16 @@ SECU-API is api for course management system that include course, question, comp
 
 ## Getting Started
 
-- 0) clone โปรเจคจาก github - https://github.com/Neungzad/SECU-API
-- 1) เข้าไปที่ folder -> SECU-API โปรเจคที่ clone มา แล้วใช้คำสั่ง  `composer install` เพื่อโหลดไลบารี่ ที่เกี่ยวข้อง
-- 2) ให้ copy ไฟล์ .env.example แล้วเปลี่ยนชื่อเป็น .env แล้วแก้ไข ให้ตรงกับ db ที่เครื่องเรา
-- 3) ลองเข้า `http://localhost/SECU-API/` ถ้าแสดงข้อความบางอย่าง แสดงว่าใช้ได้ละ 
+1. clone โปรเจคจาก github - https://github.com/Neungzad/SECU-API ไปไว้ใน document_root ของเว็บเซอร์เวอร์ในเครื่อง
+1. เข้าไปที่ SECU-API ที่ปรากฎขึ้นหลังจากข้อ 1. โปรเจคที่ clone มา แล้วใช้คำสั่ง  `composer install` เพื่อโหลดไลบารี่ ที่เกี่ยวข้อง
+1. ให้ copy ไฟล์ .env.example แล้วเปลี่ยนชื่อเป็น .env แก้ไขรายการข้อมูลด้านใน ให้ตรงกับฐานข้อมูลภายเครื่องเรา
+1. ลองเข้า `http://localhost/SECU-API/` จะเห็นข้อความดังภาพด้านล่าง
+
+![http://localhost/SECU-API SECU](https://dl.dropboxusercontent.com/u/492974/sdd/empty-page.png)
+
+หมายเหตุ: 
+- ต้องการ PHP 5.6 ขึ้นไป
+- ในกรณีที่ไม่ได้ติดตั้งเว็บเซิร์ฟเวอร์ภายในเครื่องสามารถใช้คำสั่ง `php -S 0.0.0.0:8000` เพื่อทดสอบการใช้งาน หลังจากนั้นให้เปิดเบราว์เซอร์ด้วย URL `http://localhost:8000`
 
 ## Example
 
