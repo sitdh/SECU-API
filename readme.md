@@ -15,6 +15,8 @@ SECU-API is api for course management system that include course, question, comp
 1. ให้ copy ไฟล์ .env.example แล้วเปลี่ยนชื่อเป็น .env แก้ไขรายการข้อมูลด้านใน ให้ตรงกับฐานข้อมูลภายเครื่องเรา
 1. ลองเข้า `http://localhost/SECU-API/` จะเห็นข้อความดังภาพด้านล่าง
 
+![http://localhost/SECU-API SECU](https://dl.dropboxusercontent.com/u/492974/sdd/empty-page.png)
+
 หมายเหตุ: 
 - ต้องการ PHP 5.6 ขึ้นไป
 - ในกรณีที่ไม่ได้ติดตั้งเว็บเซิร์ฟเวอร์ภายในเครื่องสามารถใช้คำสั่ง `php -S 0.0.0.0:8000` เพื่อทดสอบการใช้งาน หลังจากนั้นให้เปิดเบราว์เซอร์ด้วย URL `http://localhost:8000`
