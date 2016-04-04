@@ -28,6 +28,9 @@ $app->group([
     $app->post('course','CourseController@add');
     $app->put('course/{id}','CourseController@put');
     $app->delete('course/{id}','CourseController@remove');
+    
+    // ตย. สำหรับการเขียนเพิ่มขึ้นมา ที่นอกเหนือจาก CRUD
+    $app->get('course/{courseId}/meta/{metaKey}','CourseController@getMetaByKey'); 
 
     /**
      * Routes for resource offering-course
@@ -83,8 +86,6 @@ $app->group([
     $app->put('test-history/{id}', 'TestHistoriesController@put');
     $app->delete('test-history/{id}', 'TestHistoriesController@remove');
 
-
-
     /**
      * Routes for resource user
      */
@@ -93,7 +94,6 @@ $app->group([
     $app->post('user', 'UserController@add');
     $app->put('user/{id}', 'UserController@put');
     $app->delete('user/{id}', 'UserController@remove');
-
 
     /**
      * Routes for resource assignment-question
@@ -122,8 +122,6 @@ $app->group([
     $app->put('feedback/{id}', 'FeedbackController@put');
     $app->delete('feedback/{id}', 'FeedbackController@remove');
 
-    
-
     /**
      * Routes for resource object-mapping
      */
@@ -141,6 +139,7 @@ $app->group([
     $app->post('user-group', 'UserGroupController@add');
     $app->put('user-group/{id}', 'UserGroupController@put');
     $app->delete('user-group/{id}', 'UserGroupController@remove');
+
     /**
      * Routes for resource CourseEnroll
      */
@@ -149,6 +148,7 @@ $app->group([
     $app->post('course-enroll', 'CourseEnrollController@add');
     $app->put('course-enroll/{id}', 'CourseEnrollController@put');
     $app->delete('course-enroll/{id}', 'CourseEnrollController@remove');
+
     /**
      * Routes for resource StudyingResult
      */
@@ -157,6 +157,5 @@ $app->group([
     $app->post('studying-result', 'StudyingResultController@add');
     $app->put('studying-result/{id}', 'StudyingResultController@put');
     $app->delete('studying-result/{id}', 'StudyingResultController@remove');
-
 
 });

@@ -14,6 +14,7 @@ class CreateCourseMetasTable extends Migration
             $table->string('course_metakey', 100);
             $table->text('course_metavalue');
             // Constraints declaration
+            $table->timestamps();
         });
     }
 

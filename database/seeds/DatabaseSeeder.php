@@ -19,5 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call('GroupWorkshopMetaSeeder');
         $this->call('TestHistorySeeder');
         $this->call('OptionsSeeder');
+
+        $this->call('CourseSeeder');
     }
 }
