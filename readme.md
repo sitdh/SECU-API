@@ -24,7 +24,7 @@ SECU-API is api for course management system that include course, question, comp
 1. ทำการ [Migrate Database] (https://laravel.com/docs/5.0/migrations#rolling-back-migrations) โดย เข้าไปที่ CMD แล้วใช้คำสั่ง `php artisan migrate:refresh --seed` ระบบจะทำการสร้าง Table ให้ทั้งหมดรวมถึงการใส่ข้อมูล dummy บ้างส่วนให้
 1. หลังจากสำเร็จ ถ้าไม่มี error ลองเข้า `http://localhost/SECU-API/course` จะเห็นข้อมูลดังภาพด้านล่าง
 
-![http://localhost/SECU-API/COURSE SECU](https://dl.dropboxusercontent.com/content_link/2gBNojwDiQ9jmfQAq2nMxYscGSOzfDpEYpNtXgJzM0jaZP4GUX1DoZ2Y5dSRH9Qp/file)	
+![http://localhost/SECU-API/COURSE SECU](https://dl.dropboxusercontent.com/s/4afkgfqc8nl4f0m/01-course-all.png)	
 
 1. Routing - `/app/Http/routes.php` (มีอธิบายใน comment code) จะเป็นตัวกำหนดว่า url ที่เราพิมพ์ จะให้ไปทำงานที่ controller ไหน
 [Document Routing] (https://lumen.laravel.com/docs/5.2/routing) 
@@ -57,4 +57,4 @@ Some example for how to call this api
 
 ตัวอย่างเวลา Add/Update Meta Data
 
-![EX](https://dl.dropboxusercontent.com/content_link/N6rlRbEq9nPyhcJWzaIYN0uF10wUmqBAXn61NjJsbYLc04rVNZXuNbgK6QTEV7dM/file)
+![EX](https://dl.dropboxusercontent.com/s/2a3syezpt6su4q4/Meta-01.png)
