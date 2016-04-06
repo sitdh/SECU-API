@@ -20,6 +20,12 @@ $app->group([
 	'namespace' => 'App\Http\Controllers'],
 	function($app) {
 
+    /**
+     * Routes All Example 
+     */
+    $app->post('complie','ExampleController@complie'); // ถ้า implement แล้วก็ ลบได้เลยนะครับ
+
+
 	/**
      * Routes for resource course
      */
