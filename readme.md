@@ -6,11 +6,12 @@ SECU-API is api for course management system that include course, question, comp
 
 - [Composer] (https://getcomposer.org/)
 - Base on [Lumen] (https://lumen.laravel.com/) Framework
-- PHP >= 5.5.9
-- OpenSSL PHP Extension
-- PDO PHP Extension
-- Mbstring PHP Extension
+  - PHP >= 5.5.9
+  - OpenSSL PHP Extension
+  - PDO PHP Extension
+  - Mbstring PHP Extension
 - MySQL
+- [Python 2.7.11] (https://www.python.org/downloads/release/python-2711/) Complier (Set path ให้ใช้งานคำสั่ง python ตรง cmd ได้)
 
 ## Getting Started
 
@@ -27,18 +28,15 @@ SECU-API is api for course management system that include course, question, comp
 ![http://localhost/SECU-API/COURSE SECU](https://dl.dropboxusercontent.com/s/4afkgfqc8nl4f0m/01-course-all.png)	
 
 - [Routing] (https://lumen.laravel.com/docs/5.2/routing) - `/app/Http/routes.php` (มีอธิบายใน comment code) จะเป็นตัวกำหนดว่า url ที่เราพิมพ์ จะให้ไปทำงานที่ controller ไหน
-
 - [Controller] (https://lumen.laravel.com/docs/5.2/controllers) - `app/Http/Controller/CourseController.php` (มีอธิบายใน comment code) 
-
 - Module - `/app/Http/Modules/CourseModule.php` (มีอธิบายใน comment code) สำหรับเก็บ business logic ของแต่ละ module 
-
 - [Model] (https://laravel.com/docs/5.0/eloquent) - `app/Course.php` (มีอธิบายใน comment code) สำหรับเก็บโครงสร้างของ domain ในฐานข้อมูลและจัดการเรื่อง ORM 
 
 **หมายเหตุ:** 
 - ต้องการ PHP 5.5.9 ขึ้นไป
 - ในกรณีที่ไม่ได้ติดตั้งเว็บเซิร์ฟเวอร์ภายในเครื่องสามารถใช้คำสั่ง `php -S 0.0.0.0:8000` เพื่อทดสอบการใช้งาน หลังจากนั้นให้เปิดเบราว์เซอร์ด้วย URL `http://localhost:8000`
 
-## Example
+## Example API
 
 Some example for how to call this api
 
@@ -52,6 +50,19 @@ Some example for how to call this api
 | /course/{id} | DELETE | CourseController@remove | Delete Courses by id |
 | /course/{courseId}/meta/{metaKey} | GET | CourseController@getMetaByKey | [example] Get only meta value |
 
-##### ตัวอย่างเวลา Add/Update Meta Data: 
+##### Complier:
+| Url | Type | Controller | Description |
+|---------------|----------|--------------|----------------------------------------------------------------|
+| /complie | POST | ExampleController@complie | input ดู ตย. ด้านล่าง (หากนำไปใช้จริงแล้วก็ลบ route อันนี้ออกได้เลยครับ) |
 
-![EX](https://dl.dropboxusercontent.com/s/2a3syezpt6su4q4/Meta-01.png)
+## Example Input 
+
+ตัวอย่าง input สำหรับสำหรับบาง API
+
+##### Add/Update Meta Data: 
+
+![META DATA](https://dl.dropboxusercontent.com/s/2a3syezpt6su4q4/Meta-01.png)
+
+##### Complier Input: 
+
+![META DATA](https://dl.dropboxusercontent.com/s/ilo6zdsvsgo7lha/2016-04-06_121440_cr2.png)
