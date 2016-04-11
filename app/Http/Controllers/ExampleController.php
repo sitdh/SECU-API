@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-use App\Http\Modules\CheckerModule;
+use App\Http\Domains\SubmissionManagement\Checker;
 
 class ExampleController extends Controller
 {
@@ -21,7 +21,7 @@ class ExampleController extends Controller
 
     public function complie(Request $request)
     {   
-        $output = CheckerModule::complie($request->input('lang'), $request->input('sourceCode'), $request->input('input'));
+        $output = Checker::complie($request->input('lang'), $request->input('sourceCode'), $request->input('input'));
 
         return $this->respond(Response::HTTP_OK, $output);
     }

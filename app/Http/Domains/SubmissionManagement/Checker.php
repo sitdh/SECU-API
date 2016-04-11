@@ -1,10 +1,10 @@
-<?php namespace App\Http\Modules;
+<?php namespace App\Http\Domains\SubmissionManagement;
 
-class CheckerModule {
+class Checker {
 
 	public static function complie($lang, $sourceCode, $input="")
 	{	
-		$checker = new CheckerModule();
+		$checker = new Checker();
 		$milliseconds = round(microtime(true) * 1000);
 		$cmdInput = "";
 

@@ -1,9 +1,9 @@
-<?php namespace App\Http\Modules;
+<?php namespace App\Http\Domains\CourseManagement;
 
 // ดึง model ที่ต้องการมาใช้งาน 
 use App\Course;
 
-class CourseModule {
+class CourseDomain {
 
 	public static function getMetaByKey($courseId, $metaKey)
 	{

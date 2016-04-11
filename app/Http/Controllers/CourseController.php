@@ -3,8 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-// สำหรับเรียกใช้งาน module ที่ต้องการ (ที่เก็บ Business logic)
-use App\Http\Modules\CourseModule;
+// สำหรับเรียกใช้งาน Domain ที่ต้องการ (ที่เก็บ Business logic)
+use App\Http\Domains\CourseManagement\CourseDomain;
 
 class CourseController extends Controller {
 
@@ -36,7 +36,7 @@ class CourseController extends Controller {
 
 	public function getMetaByKey($courseId, $metaKey)
 	{
-		$result = CourseModule::getMetaByKey($courseId, $metaKey);
+		$result = CourseDomain::getMetaByKey($courseId, $metaKey);
 
 		if(is_null($result)){
 			return $this->respond(Response::HTTP_NOT_FOUND);
