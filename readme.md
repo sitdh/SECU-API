@@ -29,7 +29,7 @@ SECU-API is api for course management system that include course, question, comp
 
 - [Routing] (https://lumen.laravel.com/docs/5.2/routing) - `/app/Http/routes.php` (มีอธิบายใน comment code) จะเป็นตัวกำหนดว่า url ที่เราพิมพ์ จะให้ไปทำงานที่ controller ไหน
 - [Controller] (https://lumen.laravel.com/docs/5.2/controllers) - `app/Http/Controller/CourseController.php` (มีอธิบายใน comment code) 
-- Module - `/app/Http/Modules/CourseModule.php` (มีอธิบายใน comment code) สำหรับเก็บ business logic ของแต่ละ module 
+- Domains - `app/Http/Domains/CourseManagement/CourseDomain.php` (มีอธิบายใน comment code) สำหรับเก็บ business logic ของแต่ละ module 
 - [Model] (https://laravel.com/docs/5.0/eloquent) - `app/Course.php` (มีอธิบายใน comment code) สำหรับเก็บโครงสร้างของ domain ในฐานข้อมูลและจัดการเรื่อง ORM 
 
 **หมายเหตุ:** 
