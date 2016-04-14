@@ -5,7 +5,6 @@ use Illuminate\Http\Response;
 
 trait RESTMetaActions {
 
-
 	public function all()
 	{
 		$m = self::MODEL;

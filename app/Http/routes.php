@@ -24,6 +24,7 @@ $app->group([
      * Routes All Example 
      */
     $app->post('complie','ExampleController@complie'); // ถ้า implement แล้วก็ ลบได้เลยนะครับ
+    $app->post('checkTestCase','ExampleController@checkTestCase'); // ถ้า implement แล้วก็ ลบได้เลยนะครับ
 
 
 	/**

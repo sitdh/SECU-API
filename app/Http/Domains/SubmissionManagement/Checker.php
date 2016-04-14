@@ -6,6 +6,7 @@ class Checker {
 	{	
 		$checker = new Checker();
 		$milliseconds = round(microtime(true) * 1000);
+		$milliseconds .= $checker->randomHash();
 		$cmdInput = "";
 
 		if ($lang == 'python') {
@@ -35,9 +36,13 @@ class Checker {
 		return $output;
 	}
 
-	public static function checkTestCase()
+	public static function checkTestCase($lang, $sourceCode, $input="", $output="")
 	{
-		# next sprint
+		$checker = new Checker();
+		$result = $checker->complie($lang, $sourceCode, $input);
+		$result = trim(preg_replace('/\s+/', ' ', $result));
+
+		return $result == $output ? true : false;
 	}
 
 	private function createFile($fileName, $content)
@@ -45,6 +50,18 @@ class Checker {
 		$myfile = fopen($fileName, "w");
 		fwrite($myfile, $content);
 		fclose($myfile);
+	}
+
+	private function randomHash()
+	{
+		$seed = str_split('abcdefghijklmnopqrstuvwxyz'
+		                 .'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+		                 .'0123456789'); // and any other characters
+		shuffle($seed); // probably optional since array_is randomized; this may be redundant
+		$rand = '';
+		foreach (array_rand($seed, 5) as $k) $rand .= $seed[$k];
+
+		return $rand;
 	}
 
 }
