@@ -38,7 +38,55 @@ Some example for how to call this api
 ##### Complier:
 | Url | Type | Controller | Description |
 |---------------|----------|--------------|----------------------------------------------------------------|
-| /complie | POST | ExampleController@complie | input ดู ตย. ด้านล่าง (หากนำไปใช้จริงแล้วก็ลบ route อันนี้ออกได้เลยครับ) |
+| /complie | POST | ExampleController@complie | จะ return ค่าผมลัพธ์จากการ compile กลับไป |
+
+```PHP
+public function complie(Request $request)
+{   
+    /**
+     *  Params
+     *
+     *  $lang String (require)
+     *  $sourceCode String (require)
+     *  $input String (optional) 
+     */
+    $output = Checker::complie($request->input('lang'), 
+                               $request->input('sourceCode'), 
+                               $request->input('input'));
+
+    return $this->respond(Response::HTTP_OK, $output);
+}
+```
+
+![META DATA](https://dl.dropboxusercontent.com/s/ilo6zdsvsgo7lha/2016-04-06_121440_cr2.png)
+
+##### Check Test Case:
+| Url | Type | Controller | Description |
+|---------------|----------|--------------|----------------------------------------------------------------|
+| /checkTestCase | POST | ExampleController@checkTestCase | input ดู ตย. ด้านล่าง (หากนำไปใช้จริงแล้วก็ลบ route อันนี้ออกได้เลย
+
+```PHP
+public function checkTestCase(Request $request)
+{   
+    /**
+     *  Params
+     *
+     *  $lang String (require)
+     *  $sourceCode String (require)
+     *  $input String (require) 
+     *  $output String (require) 
+     */
+
+    $output = Checker::checkTestCase($request->input('lang'), 
+                                     $request->input('sourceCode'), 
+                                     $request->input('input'), 
+                                     $request->input('output'));
+
+    return $this->respond(Response::HTTP_OK, $output);
+}
+```
+
+![META DATA](https://dl.dropboxusercontent.com/s/g4zoayht4aepyyo/check-test-case.png)
 
 ## Example Input 
 
@@ -47,7 +95,3 @@ Some example for how to call this api
 ##### Add/Update Meta Data: 
 
 ![META DATA](https://dl.dropboxusercontent.com/s/2a3syezpt6su4q4/Meta-01.png)
-
-##### Complier Input: 
-
-![META DATA](https://dl.dropboxusercontent.com/s/ilo6zdsvsgo7lha/2016-04-06_121440_cr2.png)
