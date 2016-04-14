@@ -63,7 +63,7 @@ public function complie(Request $request)
 ##### Check Test Case:
 | Url | Type | Controller | Description |
 |---------------|----------|--------------|----------------------------------------------------------------|
-| /checkTestCase | POST | ExampleController@checkTestCase | input ดู ตย. ด้านล่าง (หากนำไปใช้จริงแล้วก็ลบ route อันนี้ออกได้เลย
+| /checkTestCase | POST | ExampleController@checkTestCase | จะ return ค่า true หรือ false โดยเช็คความเท่ากันของ input กับ output | 
 
 ```PHP
 public function checkTestCase(Request $request)
