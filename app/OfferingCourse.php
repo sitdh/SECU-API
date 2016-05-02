@@ -16,14 +16,20 @@ class OfferingCourse extends Model {
 		// Validation rules
 	];
 
+	/* Relation */
+	public function course()
+	{
+		return $this->belongsTo("App\Course", "course_id", "course_id");
+	}
+
 	public function metas()
 	{
 		return $this->hasMany("App\OfferingCourseMeta", "offering_course_id", "offering_course_id");
 	}
 
-	public function course()
+	public function assignments()
 	{
-		return $this->belongsTo("App\Course", "course_id", "course_id");
-	}
+		return $this->hasMany("App\Assignment", "offering_course_id", "offering_course_id");
+	}	
 
 }
