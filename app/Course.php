@@ -21,5 +21,9 @@ class Course extends Model {
 		return $this->hasMany("App\CourseMeta", "course_id", "course_id"); // ตารางที่เราจะเชื่อมด้วย แบบ one-to-many 
 	}
 
+	public function offeringCourses()
+	{
+		return $this->hasMany("App\OfferingCourse", "course_id", "course_id"); // ตารางที่เราจะเชื่อมด้วย แบบ one-to-many 
+	}
 
 }

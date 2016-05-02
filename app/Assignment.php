@@ -16,6 +16,12 @@ class Assignment extends Model {
 		// Validation rules
 	];
 
+	/* Reletion */
+	public function OfferingCourse()
+	{
+		return $this->belongsTo("App\OfferingCourse", "offering_course_id", "offering_course_id");
+	}
+	
 	public function metas()
 	{
 		$this->hasMany('App\AssignmentMeta','assignment_id','assignment_id');

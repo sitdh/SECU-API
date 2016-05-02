@@ -5,6 +5,7 @@ use Illuminate\Http\Response;
 
 trait RESTMetaActions {
 
+
 	public function all()
 	{
 		$m = self::MODEL;
@@ -44,16 +45,19 @@ trait RESTMetaActions {
 		if($model){
 			// insert meta
 			$mMeta = self::META_MODEL;
-			$metaInputs = $request->input('meta');			
-			foreach ($metaInputs as $key => $value) {				
-				$metaRow[$model->getKeyName()] = $model->getKey();
-				$metaRow[self::FIELD_METAKEY] = $key;
-				$metaRow[self::FIELD_METAVALUE] = $value;
 
-				$dataArr[] = $metaRow;
-			}			
-			$mMeta::insert($dataArr);
-			
+			if ($request->input('meta')) {			
+				$metaInputs = $request->input('meta');			
+				foreach ($metaInputs as $key => $value) {				
+					$metaRow[$model->getKeyName()] = $model->getKey();
+					$metaRow[self::FIELD_METAKEY] = $key;
+					$metaRow[self::FIELD_METAVALUE] = $value;
+
+					$dataArr[] = $metaRow;
+				}			
+				$mMeta::insert($dataArr);
+			}
+
 			// get all meta
 			$model['meta'] = $mMeta::where($model->getKeyName(), $model->getKey())->get();
 		}else{
@@ -77,19 +81,22 @@ trait RESTMetaActions {
 
 		// delete meta 
 		$mMeta::where($model->getKeyName(), $model->getKey())->delete();
-		// insert meta
-		$metaInputs = $request->input('meta');			
-		foreach ($metaInputs as $key => $value) {				
-			$metaRow[$model->getKeyName()] = $model->getKey();
-			$metaRow[self::FIELD_METAKEY] = $key;
-			$metaRow[self::FIELD_METAVALUE] = $value;
+		
+		if ($request->input('meta')) {
+			// insert meta
+			$metaInputs = $request->input('meta');			
+			foreach ($metaInputs as $key => $value) {				
+				$metaRow[$model->getKeyName()] = $model->getKey();
+				$metaRow[self::FIELD_METAKEY] = $key;
+				$metaRow[self::FIELD_METAVALUE] = $value;
 
-			$dataArr[] = $metaRow;
-		}			
-		$mMeta::insert($dataArr);
+				$dataArr[] = $metaRow;
+			}			
+			$mMeta::insert($dataArr);
 
-		// get all meta
-		$model['meta'] = $mMeta::where($model->getKeyName(), $model->getKey())->get();
+			// get all meta
+			$model['meta'] = $mMeta::where($model->getKeyName(), $model->getKey())->get();
+		}
 
 		return $this->respond(Response::HTTP_OK, $model);
 	}

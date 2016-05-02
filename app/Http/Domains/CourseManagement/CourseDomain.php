@@ -2,6 +2,7 @@
 
 // ดึง model ที่ต้องการมาใช้งาน 
 use App\Course;
+use App\OfferingCourse;
 
 class CourseDomain {
 
@@ -15,6 +16,27 @@ class CourseDomain {
 
 		// return เฉพาะค่า value ที่ต้องการเท่านั้น
 		return $keyValue->course_metavalue;
+	}
+
+	public static function getOfferingCourseAndAssignments($offeringCourseId)
+	{
+		// ดึงข้อมูล offeringCourse by id
+		$offeringCourse = OfferingCourse::find($offeringCourseId);
+
+		/** 
+		 * ดึงข้อมูลที่เป็น parent ของ OfferingCourse คือ Course
+		 * (เกิดจากการกำหนด relation ใน file - OfferingCourse.php)
+		 */  
+		$offeringCourse['coures'] = $offeringCourse->course;   
+
+		/**
+		 * ทำการดึง assignments ที่อยู่ภายใต้ offering course มาทั้งหมด
+		 * เก็บ assignments เข้าไปรวมกับ offering course เพื่อ return
+		 * (เกิดจากการกำหนด relation ใน file - OfferingCourse.php)
+		 */
+		$offeringCourse['assignments'] = $offeringCourse->assignments;
+
+		return $offeringCourse;
 	}
 
 	/* 
